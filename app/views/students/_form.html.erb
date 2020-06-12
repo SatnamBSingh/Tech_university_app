@@ -1,0 +1,45 @@
+<%= render 'errors', student: @student %>
+<div class= "row">
+  <div class= "col s12">
+    <h3 class= "center-align"></h3>
+  </div>
+</div>
+<div class="container">
+  <div class="row-center">
+    <div class="col s12 m12 l12">
+      <div class="card-panel">
+        <h3 class="header"><%= @student.new_record? ?  "SignUp" : "Edit your Profile" %>
+        </h3>
+        <div class="row">
+          <%= form_for(@student, html: {class: "col s12"}) do |f| %>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.text_field :name, placeholder: "Enter your full name", autofocus: true %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.text_field :email, placeholder: "Enter your Email" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.password_field :password, placeholder: "Choose your Password" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.password_field :Confirm_password, placeholder: "Confirm Password" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.submit(@student.new_record? ?  "SignUp" : "Submit Updates", class: "btn orange waves-effect waves-light right") %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

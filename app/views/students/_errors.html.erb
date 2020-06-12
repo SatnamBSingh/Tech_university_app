@@ -1,0 +1,19 @@
+<% if student.errors.any? %>
+<div class="container">
+  <div class="row sign-up-form">
+    <div class= "col s12 m12 l12">
+      <div class="card-panel red lighten-2">
+      <span class="white-text"> 
+      <%= pluralize(student.errors.count, "error") %>
+      prohibited your profile from being create
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+      <l1><%= message%></l1>
+      <% end %>
+      </ul>
+     </span>
+    </div>
+   </div>
+  </div>
+ </div>
+<% end %>
