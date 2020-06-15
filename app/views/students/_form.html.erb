@@ -24,17 +24,17 @@
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <%= f.password_field :password, placeholder: "Choose your Password" %>
+                <%= f.password_field :password, placeholder: "Choose a Password" %>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <%= f.password_field :Confirm_password, placeholder: "Confirm Password" %>
+                <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <%= f.submit(@student.new_record? ?  "SignUp" : "Submit Updates", class: "btn orange waves-effect waves-light right") %>
+                <%= f.button(@student.new_record? ?  '<i class="material-icons right">arrow_forward</i>SignUp'.html_safe : '<i class="material-icons right">arrow_forward</i>Submit Changes'.html_safe, class: "btn orange waves-effect waves-light right") %>
               </div>
             </div>
           <% end %>

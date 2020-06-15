@@ -1,0 +1,32 @@
+<div class= "row">
+  <div class= "col s12">
+    <h3 class= "center-align"></h3>
+  </div>
+</div>
+<div class="container">
+  <div class="row-center">
+    <div class="col s12 m12 l12">
+      <div class="card-panel">
+        <h3 class="header">Log in</h3>
+          <%= form_for(:logins, html: {class: "col s12"}) do |f| %>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.text_field :email, placeholder: "Enter your Email" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.password_field :password, placeholder: "Enter your Password" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.button '<i class="material-icons right">arrow_forward</i>LOg in'.html_safe, class: "btn orange waves-effect waves-light right" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
