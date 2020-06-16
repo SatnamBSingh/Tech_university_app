@@ -15,9 +15,9 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-//= require materialize
 //= require jquery
-$( document ).on('turbolinks', function(){
+//= require materialize
+$( document ).on('turbolinks:load', function(){
   $(".dropdown-trigger").dropdown();
   $('.sidenav').sidenav();
 })
